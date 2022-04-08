@@ -9,7 +9,7 @@
  */
 
 // Bibliotecas
-#include <serial.h>;
+//#include <Serial.h>;
 
 // Constantes
 
@@ -32,6 +32,12 @@ void loop() {// Inicio de void loop
   // put your main code here, to run repeatedly:
   dato++;
   //dato = dato + 1;
+
+  if (dato > 8){
+    dato = 0;    
+  }
+
+  //dato %= 8;
 
   Serial.println(dato);
   delay(1000);
